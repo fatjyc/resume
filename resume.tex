@@ -1,80 +1,109 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix}
+\usepackage{bookmark}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\name{Yucheng Jiang}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
-
-\section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
-
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
-\begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
-\end{itemize}
-
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
-\begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
-\end{itemize}
-
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
-\begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
-\end{itemize}
-
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+  \email{fatjyc@gmail.com} \textperiodcentered\ 
+  \phone{(+86) 186-666-26214}}
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+  \item \textbf{Languages/Frameworks}: Java, JavaScript/TypeScript, Ruby, Rust, React
+  \item \textbf{LLM/Agent Engineering}: LLM application development, Agent integration, vector database (RAG), workflow orchestration \& scheduling
+  \item \textbf{DevOps/Platform}: Git, CI/CD, Docker, Kubernetes
 \end{itemize}
 
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
+\section{\faBuilding\ Work Experience}
 
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+\datedsubsection{\textbf{Shenzhen Babel Technology Co., Ltd.}}{May 2022 -- Jul 2025}
+\begin{itemize}
+  \item \roletitle{Software Engineer}{Led core architecture and feature development for an AI-driven cloud-native online development platform; participated in frontend and backend service design and implementation, supporting the evolution of multiple product lines including gru.ai and gbox.ai.}
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+\datedsubsection{\textbf{Shenzhen Tencloud Coding Technology Co., Ltd.}}{Apr 2014 -- Feb 2022}
+\begin{itemize}
+  \item \roletitle{Tech Lead, Code Hosting}{Led technical planning and team collaboration for the code hosting product line; architected core capabilities including Git protocol stack, code review (MR), and Webhooks; delivered enterprise solutions including private deployment and OEM customization.}
+  \item \roletitle{Platform Engineer, CODING}{Developed multiple product lines on CODING (https://coding.net/) platform, covering project management, code hosting, CI/CD and the DevOps product matrix.}
+  \item \roletitle{Platform Engineer, Codemart}{Developed core features for Codemart (https://codemart.com/), responsible for requirements review, technical design and key module implementation.}
+  \item \roletitle{Enterprise Solutions Engineer}{Provided pre-sales technical consulting, POC validation, and private deployment architecture design for enterprise customers; drove deployment delivery and issue resolution.}
+\end{itemize}
+
+\datedsubsection{\textbf{Shenzhen AOSI Network Technology Co., Ltd.}}{Jul 2013 -- Mar 2014}
+\begin{itemize}
+  \item \roletitle{Software Engineer}{Developed features for Gitee (https://gitee.com/) platform, responsible for code hosting, Issues, Wiki modules iteration and performance optimization.}
+\end{itemize}
+
+\section{\faUsers\ Projects}
+
+\datedsubsection{\textbf{gru.ai}}{Oct 2023 -- Jul 2025}
+https://gru.ai \ | \ AI-powered online test development platform
+\role{Software Engineer}{}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item Designed, developed and integrated test development Agents, covering tool invocation, context organization and task collaboration pipelines
+  \item Built AI test workflow orchestration and scheduling capabilities, ensuring observability and stable execution of multi-step tasks
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{babel.cloud}}{May 2022 -- Jul 2025}
+https://babel.cloud \ | \ Cloud-native online development platform for AI scenarios
+\role{Software Engineer}{}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item Designed and implemented platform code management capabilities (repository/permissions/basic operations integration and service layer)
+  \item Integrated vector database capabilities to support RAG-based retrieval and knowledge management, serving AI-assisted development workflows
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{CODING Platform}}{Jan 2016 -- Sep 2020}
+https://coding.net \ | \ One-stop DevOps platform (code hosting, CI/CD, project management)
+\role{Software Engineer, Tech Lead of Code Hosting}{}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item Led architecture design and development of code hosting business, building core capabilities including code hosting, code review (MR), and Webhooks
+  \item Led enterprise transformation: migrated frontend from AngularJS to React; refactored backend into service domains with API gateway redesign, supporting multi-tenant and permission system upgrades
+  \item Led OEM and private deployment initiatives: designed multi-tenant data isolation, configuration center, and offline deployment solutions for major enterprise customers
+  \item As Tech Lead: drove evolution of Git protocol stack, MR, Webhooks, and large file storage capabilities; established technical review and sprint planning processes to improve delivery efficiency and quality
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{Nocalhost}}{Sep 2020 -- Jan 2021}
+https://nocalhost.dev \ | \ Cloud-native remote development tool (CNCF Sandbox)
+\role{Software Engineer}{}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item Led frontend module and JetBrains IDE plugins (IntelliJ IDEA, GoLand, etc.) development
+  \item Implemented port forwarding, file sync, remote debugging, and hot reload capabilities, enabling developers to transparently operate in-cluster workloads from local IDE
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{Codemart Platform}}{Jan 2015 -- Jun 2016}
+https://codemart.com \ | \ Software outsourcing service platform (matching, payment, review)
+\role{Software Engineer}{}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item Built and iterated platform features: developed account system, job posting/bidding workflow, payment integration (Alipay/WeChat Pay), and admin dashboard
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{Gitee}}{Jul 2013 -- Mar 2014}
+https://gitee.com \ | \ Code hosting platform in China (Git hosting, Issues, Wiki)
+\role{Software Engineer}{}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item Developed code hosting, Issues, Wiki modules with performance optimization, supporting platform feature iteration and stability improvements
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Guilin University of Electronic Technology}, Guilin, Guangxi, China}{2009 -- 2013}
+\textit{Bachelor of Engineering} in Computer Science and Technology
+
 \end{document}

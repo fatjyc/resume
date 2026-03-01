@@ -9,6 +9,7 @@
 % \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
+\usepackage{bookmark} % fix outline/bookmark warnings, load after hyperref (from resume.cls)
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
@@ -19,125 +20,115 @@
   \email{fatjyc@gmail.com} \textperiodcentered\ 
   \phone{(+86) 186-666-26214}}
 
-
-\section{\faCogs\  技能}
+\section{\texorpdfstring{\faCogs\ 技能}{技能}}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: Java, JavaScript, TypeScript, Ruby, Rust
-  \item 框架: Spring, React, Ruby on Rails
-  \item 工具: Git, Jenkins, Vim, Linux, Docker, Kubernetes
+  %% [MOD] 统一“技能”表述口径，增强可读性；“AI 工程”改为更常见的“LLM/Agent 工程”措辞
+  \item \textbf{编程语言/框架}: Java、JavaScript/TypeScript、Ruby、Rust、React
+  \item \textbf{LLM/Agent 工程}: LLM 应用开发、Agent 集成、向量数据库（RAG）、工作流编排与调度
+  \item \textbf{DevOps/平台}: Git、CI/CD、Docker、Kubernetes
 \end{itemize}
 
-\section{\faBuilding\ 工作经历}
+\section{\texorpdfstring{\faBuilding\ 工作经历}{工作经历}}
+
 \datedsubsection{\textbf{深圳市巴别科技有限公司}}{2022年5月 -- 2025年7月}
 \begin{itemize}
-\item \role{babel.cloud 开发工程师}{参与开发公司旗下 AI 产品及其相关平台各项功能}
+  %% [MOD] 从“负责/参与”改为更清晰的职责边界；去掉分号；补足“平台/多产品线”表达
+  \item \roletitle{开发工程师}{负责 AI 驱动的云原生在线开发平台核心架构与功能研发；参与前后端服务设计与落地，支撑 gru.ai、gbox.ai 等多产品线演进。}
 \end{itemize}
 
 \datedsubsection{\textbf{深圳市腾云扣钉科技有限公司}}{2014年4月 -- 2022年2月}
 \begin{itemize}
-\item \role{CODING 代码托管业务开发负责人}{主导代码托管团队，维护代码托管业务并进行新功能的开发}
-\item \role{CODING 平台开发工程师}{参与开发CODING (https://coding.net/) 平台旗下各业务}
-\item \role{码市平台开发工程师}{参与开发码市 (https://codemao.com/) 平台各项功能}
-\item \role{CODING 平台对接企业客户工程师}{参与公司产品对企业级客户的售前咨询、架构设计、方案验证、竞标和交付工作}
+  %% [MOD] 强化“负责人”影响范围；统一术语（代码评审/MR/Webhook）；提升表达专业度
+  \item \roletitle{代码托管业务开发负责人}{主导代码托管业务线技术规划与团队协作机制建设；负责 Git 协议栈、代码评审（MR）、Webhook 等核心能力的架构演进；带领团队完成私有化部署、OEM 定制等企业级方案交付。}
+  %% [MOD] 调整措辞，强调产品矩阵覆盖面
+  \item \roletitle{平台开发工程师}{参与 CODING（https://coding.net/）多业务线研发，覆盖项目管理、代码托管、CI/CD 等 DevOps 产品矩阵。}
+  %% [MOD] 统一“参与/负责”风格，避免口语化
+  \item \roletitle{码市平台开发工程师}{参与码市（https://codemart.com/）核心功能研发，承担需求评审、技术方案设计与关键模块实现。}
+  %% [MOD] “对接”更偏执行，补充“架构/交付闭环”更贴近企业方案岗位价值
+  \item \roletitle{企业客户解决方案工程师}{负责企业客户售前技术咨询、POC 验证与私有化部署方案设计；推进部署交付落地与问题闭环。}
 \end{itemize}
 
 \datedsubsection{\textbf{深圳市奥思网络科技有限公司}}{2013年7月 -- 2014年3月}
 \begin{itemize}
-\item \role{Gitee 开发工程师}{参与开发 Gitee (https://gitee.com/) 平台各项功能}
+  %% [MOD] 精炼句式，突出模块范围
+  \item \roletitle{开发工程师}{参与 Gitee（https://gitee.com/）平台研发，负责代码托管、Issues、Wiki 等模块迭代与性能优化。}
 \end{itemize}
 
+\section{\texorpdfstring{\faUsers\ 项目经历}{项目经历}}
 
-\section{\faUsers\ 项目经历}
-
-\datedsubsection{\textbf{gbox.ai 项目}}{2025年2月 -- 2025年7月}
-https://gbox.ai 基于 AI 的在线开发平台
+\datedsubsection{\textbf{gru.ai}}{2023年10月 -- 2025年7月}
+https://gru.ai \ | \ 基于 AI 的在线测试开发平台
 \role{开发工程师}{}
 \begin{onehalfspacing}
-参与开发 gbox.ai (https://gbox.ai/) 平台各项功能
+\begin{itemize}
+  %% [MOD] 去重：原两条“支撑工作流”重复；补充“编排/调度/集成”的具体动作
+  \item 参与测试开发 Agent 的设计、开发与集成，覆盖工具调用、上下文组织与任务协作链路
+  \item 负责 AI 测试开发工作流的编排与调度能力建设，保障多步骤任务的可观测性与稳定运行
+\end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{gru.ai 项目}}{2023年10月 -- 2025年7月}
-https://gru.ai 基于 AI 的在线开发平台
+\datedsubsection{\textbf{babel.cloud}}{2022年5月 -- 2025年7月}
+https://babel.cloud \ | \ 面向 AI 场景的云原生在线开发平台
 \role{开发工程师}{}
 \begin{onehalfspacing}
-参与开发 gru.ai (https://gru.ai/) 平台各项功能
+\begin{itemize}
+  %% [MOD] “代码管理能力”具体化；“推理与开发工作流”表述更准确
+  \item 设计并实现平台代码管理能力（仓库/权限/基础操作链路对接与服务化）
+  \item 集成向量数据库能力，支撑 RAG 等场景的检索与知识管理，并服务于 AI 辅助开发工作流
+\end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{babel.cloud 项目}}{2022年5月 -- 2025年7月}
-https://babel.cloud 适用于 AI 的基于云原生的在线开发平台
-\role{开发工程师}{}
-\begin{onehalfspacing}
-参与开发 babel.cloud (https://babel.cloud/) 平台各项功能
-\end{onehalfspacing}
-
-\datedsubsection{\textbf{CODING 平台项目}}{2016年1月 -- 2020年9月}
-https://coding.net 一站式 DevOps 能效平台
+\datedsubsection{\textbf{CODING 平台}}{2016年1月 -- 2020年9月}
+https://coding.net \ | \ 一站式 DevOps 平台（代码托管、CI/CD、项目管理）
 \role{开发工程师，代码托管业务开发负责人}{}
 \begin{onehalfspacing}
-参与了 CODING 平台从零开始的研发工作，包含账号体系、任务管理功能、社交圈功能、代码托管功能等。参与了项目微服务化的设计与开发。并且深度参与了项目由面向个人开发转换为面向企业团队开发者的产品转型已经相关的功能开发工作。
 \begin{itemize}
-  \item 参与了 CODING 平台从零开始的研发工作，包含账号体系、任务管理功能、社交圈功能、代码托管功能等。参与了项目微服务化的设计与开发
-  \item 深度参与了项目由面向个人开发转换为面向企业团队开发者的产品转型已经相关的功能开发工作，其中包含前端框架的替换重构，由AngularJS 替换为React，以及后端服务的重构
-  \item 对 CODING 平台进行 OEM 改造，平台私有部署方案的设计与开发
-  \item 主导代码托管团队，担任团队负责人，对团队进行建设，人员招聘与培训；对代码托管功能进行维护、架构改良以及新功能的开发
+  %% [MOD] 统一术语；“支撑”改为“提供/建设”更主动
+  \item 负责代码托管业务的架构设计与研发，建设代码托管、代码评审（MR）、Webhook 等核心能力
+  %% [MOD] “B2C 转 B2B”改为“企业化转型”更职业；拆分点更清晰
+  \item 主导产品企业化转型：前端从 AngularJS 迁移至 React；后端按服务域拆分并改造 API 网关，支撑多租户与权限体系升级
+  %% [MOD] 语义更精确：多租户数据隔离/配置中心/离线方案属于交付关键项
+  \item 主导 OEM 与私有化交付改造：设计多租户数据隔离、配置中心与离线部署方案，支撑多家大型企业客户交付
+  %% [MOD] “MR、Webhook、大文件存储”统一风格；“推进团队建设”具体化为“流程与评审机制”
+  \item 担任代码托管负责人：推进 Git 协议栈、MR、Webhook、大文件存储等能力演进；建立技术评审与迭代规划机制，提升交付效率与质量
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{nocalhost 项目}}{2020年9月 -- 2021年1月}
-https://nocalhost.dev 基于云原生的开发工具
+\datedsubsection{\textbf{nocalhost}}{2020年9月 -- 2021年1月}
+https://nocalhost.dev \ | \ 云原生远程开发工具（CNCF Sandbox）
 \role{开发工程师}{}
 \begin{onehalfspacing}
-参与并主导前端开发与 JetBrains 系列插件开发，基于云原生的开发工具（https://nocalhost.dev）
-\end{onehalfspacing}  
-
-\datedsubsection{\textbf{CloudStudio 项目}}{2021年2月 -- 2022年2月}
-https://cloudstudio.net 在线开发环境
-\role{开发工程师}{}
-\begin{onehalfspacing}
-参与维护在线开发环境项目 https://cloudstudio.net/
-\end{onehalfspacing}  
-
-\datedsubsection{\textbf{码市平台项目}}{2015年1月 -- 2016年6月}
-https://codemao.com 互联网软件外包服务平台
-\role{开发工程师}{}
-\begin{onehalfspacing}
-参与了码市平台从零开始的研发工作，包含账号体系、发布单功能、接单功能、支付系统、管理后台等功能。支持平台上线与初期运维。
+\begin{itemize}
+  %% [MOD] “主导”与交付物绑定；“系列 IDE 插件”更精确
+  \item 主导前端模块与 JetBrains 系列 IDE 插件（IntelliJ IDEA、GoLand 等）研发
+  %% [MOD] 句式更聚焦“能力 + 价值”
+  \item 实现端口转发、文件同步、远程调试、热加载等能力，使开发者可在本地 IDE 中透明操作集群内工作负载
+\end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{Gitee 项目}}{2013年7月 -- 2014年3月}
-https://gitee.com 代码托管平台
+\datedsubsection{\textbf{码市平台}}{2015年1月 -- 2016年6月}
+https://codemart.com \ | \ 互联网软件外包服务平台（交易撮合、支付、评价）
 \role{开发工程师}{}
 \begin{onehalfspacing}
-参与开发 Gitee (https://gitee.com/) 平台各项功能
+\begin{itemize}
+  %% [MOD] 更工程化：列举“关键模块”并保持并列结构
+  \item 参与平台建设与迭代：负责账号体系、发布/接单流程、支付系统（支付宝/微信）、管理后台等核心模块
+\end{itemize}
 \end{onehalfspacing}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\datedsubsection{\textbf{Gitee}}{2013年7月 -- 2014年3月}
+https://gitee.com \ | \ 国内代码托管平台（Git 托管、Issues、Wiki）
+\role{开发工程师}{}
+\begin{onehalfspacing}
+\begin{itemize}
+  %% [MOD] 与“工作经历”避免重复，但保留项目维度描述；更简洁
+  \item 参与代码托管、Issues、Wiki 等模块研发与性能优化，支持平台功能迭代与稳定性提升
+\end{itemize}
+\end{onehalfspacing}
 
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{桂林电子科技大学信息科技学院}}{2009 -- 2013}
+\textit{工学学士}\ 计算机科学与技术 \textperiodcentered\ 广西桂林
 
-% \section{\faHeartO\ 获奖情况}
-% \datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-% \datedline{其他奖项}{2015}
-
-% \section{\faInfo\ 其他}
-% % increase linespacing [parsep=0.5ex]
-% \begin{itemize}[parsep=0.5ex]
-%   \item 技术博客: http://blog.yours.me
-%   \item GitHub: https://github.com/username
-%   \item 语言: 英语 - 熟练(TOEFL xxx)
-% \end{itemize}
-
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{桂林电子科技大学信息科技学院}, 广西桂林}{2009 -- 2013}
-\textit{学士}\ 计算机科学与技术
-
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}

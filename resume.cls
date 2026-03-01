@@ -120,3 +120,8 @@
   {\par \textit{#1} ~ #2 \par}
   \vspace{0.85ex}
 }
+
+\newcommand{\roletitle}[2]{
+  {\par \textbf{#1} \ifthenelse{\isempty{#2}}{}{\\ #2} \par}
+  \vspace{0.5ex}
+}
