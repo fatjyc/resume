@@ -15,11 +15,11 @@
 
 \section{\faStar\ Highlights}
 \begin{itemize}[parsep=0.5ex]
-  \item 10+ years of hands-on experience in code hosting and DevOps, proficient in Git protocol stack, code review (MR), Webhooks, multi-tenant and permission system architecture and implementation.
-  \item Solid AI engineering experience, familiar with Agent development and integration, workflow orchestration and vector database (RAG), capable of delivering AI capabilities into production-ready products end-to-end.
-  \item Extensive B2B solutions and enterprise delivery experience, led OEM and private deployment from solution design to offline delivery and issue resolution.
-  \item Strong cross-stack development skills (Java/TS/Ruby/Rust, React, IDE plugins/cloud IDE/CLI), improving development efficiency and maintainability through tooling and platformization.
-  \item Focus on performance and stability, able to balance quality and iteration speed across complex multi-product lines, driving continuous architecture evolution.
+  \item 10+ years of experience in platform and developer tooling, with long-term ownership of code hosting, version management, workflows, private deployment, and complex system architecture evolution.
+  \item Hands-on experience delivering Agent, RAG, workflow orchestration, and execution-verification loops in production; contributed to AI test development Agent and AI development platform initiatives.
+  \item Skilled at translating model capabilities into executable, controllable, and observable system features, with a focus on Tool Use, State, Workflow, Failure Handling, and platform integration.
+  \item Long-term practitioner of AI-assisted development using Cursor, Claude Code, Codex and similar tools across code generation, refactoring, debugging, and troubleshooting; experienced in stably integrating AI tools into engineering workflows.
+  \item Strong cross-stack development skills (Java/TypeScript/Ruby/Rust, React, IDE plugins/cloud IDE/CLI) with B2B solutions and enterprise delivery experience; capable of cross-layer design and implementation from infrastructure to AI applications.
 \end{itemize}
 
 \section{\faCogs\ Skills}
@@ -33,7 +33,7 @@
 
 \datedsubsection{\textbf{Shenzhen Babel Technology Co., Ltd.}}{May 2022 -- Jul 2025}
 \begin{itemize}
-  \item \roletitle{Software Engineer}{Led core architecture and feature development for an AI-driven cloud-native online development platform; participated in frontend and backend service design and implementation, supporting the evolution of multiple product lines including gru.ai and gbox.ai.}
+  \item \roletitle{Software Engineer}{Led R\&D of AI-driven cloud-native development platform and Agent-related capabilities; participated in frontend and backend service design and delivery, supporting the evolution of multiple product lines including gru.ai, babel.cloud, and gbox.ai.}
 \end{itemize}
 
 \datedsubsection{\textbf{Shenzhen Tencloud Coding Technology Co., Ltd.}}{Apr 2014 -- Feb 2022}
@@ -52,12 +52,15 @@
 \section{\faUsers\ Projects}
 
 \datedsubsection{\textbf{gru.ai}}{Oct 2023 -- Jul 2025}
-https://gru.ai \ | \ AI-powered online test development platform
+https://gru.ai \ | \ AI-powered unit test development platform for GitHub Pull Request workflows
 \role{Software Engineer}{}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item Designed, developed and integrated test development Agents, covering tool invocation, context organization and task collaboration pipelines
-  \item Built AI test workflow orchestration and scheduling capabilities, ensuring observability and stable execution of multi-step tasks
+  \item Built an execution-oriented AI unit test development Agent targeting GitHub Pull Request workflows, chaining code change understanding, context retrieval, test generation, sandbox validation, and PR write-back into a complete closed loop
+  \item Implemented configuration-driven test Agent pipelines based on a unified Agent Behavior framework, abstracting job / plan / task / step execution structures with support for multi-step orchestration, failure recovery, and termination control
+  \item Integrated GitHub API, code search, and dependency resolution to enrich context with call graphs, relevant source code, and external dependencies, reducing generation failures and invalid retries caused by insufficient context
+  \item Built a container/sandbox-based execution validation environment supporting Node.js (npm), Java (Maven), Rust (cargo test), and other standard test stacks, using real execution results rather than text generation as the success criterion
+  \item Designed retry thresholds, auto-termination, and workflow write-back mechanisms, advancing AI from a code suggestion tool to an execution-oriented Agent integrated into engineering workflows
 \end{itemize}
 \end{onehalfspacing}
 
@@ -66,8 +69,11 @@ https://babel.cloud \ | \ Cloud-native online development platform for AI scenar
 \role{Software Engineer}{}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item Designed and implemented platform code management capabilities (repository/permissions/basic operations integration and service layer)
-  \item Integrated vector database capabilities to support RAG-based retrieval and knowledge management, serving AI-assisted development workflows
+  \item Contributed to building Babel Cloud, a cloud-native online development platform for AI scenarios; responsible for platform component orchestration, code version management, and vector retrieval infrastructure
+  \item Designed and implemented platform component assembly, orchestrating HTTP, Function, and Worker TypeScript modules into fully runnable Node.js services with injected debugging and monitoring capabilities
+  \item Implemented in-platform code version management using Git and Rust-based Git libraries, supporting code storage, history tracking, version rollback, and branch operations, bridging low-level version semantics with workspace UX
+  \item Built an integrated vector database capability based on PostgreSQL and vector extensions, with a Pinecone-style API design, enabling users to develop AI applications directly within the platform
+  \item Drove platform evolution from an ``online development environment'' to a cloud-native development foundation unifying application building, code management, and AI capabilities
 \end{itemize}
 \end{onehalfspacing}
 
