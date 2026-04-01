@@ -22,17 +22,16 @@
 
 \section{\texorpdfstring{\faStar\ 个人亮点}{个人亮点}}
 \begin{itemize}[parsep=0.5ex]
-  \item 10+ 年代码托管与 DevOps 实战，精通 Git 协议栈、代码评审（MR）、Webhook、多租户与权限体系等核心能力的架构与落地。
-  \item AI 工程化经验扎实，熟悉 Agent 开发与集成、工作流编排与向量数据库（RAG），具备将 AI 能力落地到产品的全流程能力。
-  \item B2B 解决方案与企业级交付经验丰富，主导 OEM 与私有化部署，从方案设计到离线交付与问题闭环全流程可控。
-  \item 跨栈研发能力强（Java/TS/Ruby/Rust、React、IDE 插件/在线开发环境/CLI），以工具化与平台化提升研发效率与可维护性。
-  \item 注重性能与稳定性，能在复杂多产品线中平衡质量与迭代速度，推动架构持续演进。
+  \item 10+ 年平台与开发者工具研发经验，长期负责代码托管、版本管理、工作流、私有化交付与复杂系统架构演进。
+  \item 具备 Agent、RAG、工作流编排与执行验证闭环的工程落地经验，参与 AI 测试开发 Agent 与 AI 开发平台建设。
+  \item 擅长将模型能力转化为可执行、可控、可观测的系统能力，关注 Tool Use、State、Workflow、Failure Handling 与平台集成。
+  \item 长期在真实开发场景中使用 Cursor、Cloud Code、Codex 等 AI 开发工具，覆盖代码生成、重构、调试与问题排查，具备将 AI 工具稳定融入研发工作流的实践经验。
+  \item 跨栈研发能力强（Java/TypeScript/Ruby/Rust、React、IDE 插件/在线开发环境/CLI），并具备 B2B 解决方案与企业级交付经验，能够从底层基础设施到上层 AI 应用做跨层设计与实现。
 \end{itemize}
 
 \section{\texorpdfstring{\faCogs\ 技能}{技能}}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  %% [MOD] 统一“技能”表述口径，增强可读性；“AI 工程”改为更常见的“LLM/Agent 工程”措辞
   \item \textbf{编程语言/框架}: Java、JavaScript/TypeScript、Ruby、Rust、React
   \item \textbf{LLM/Agent 工程}: LLM 应用开发、Agent 集成、向量数据库（RAG）、工作流编排与调度
   \item \textbf{DevOps/平台}: Git、CI/CD、Docker、Kubernetes
@@ -43,7 +42,7 @@
 \datedsubsection{\textbf{深圳市巴别科技有限公司}}{2022年5月 -- 2025年7月}
 \begin{itemize}
   %% [MOD] 从“负责/参与”改为更清晰的职责边界；去掉分号；补足“平台/多产品线”表达
-  \item \roletitle{开发工程师}{负责 AI 驱动的云原生在线开发平台核心架构与功能研发；参与前后端服务设计与落地，支撑 gru.ai、gbox.ai 等多产品线演进。}
+  \item \roletitle{开发工程师}{负责 AI 驱动的云原生开发平台与 Agent 相关能力研发；参与前后端服务设计与落地，支撑 gru.ai、babel.cloud、gbox.ai 等多产品线演进。}
 \end{itemize}
 
 \datedsubsection{\textbf{深圳市腾云扣钉科技有限公司}}{2014年4月 -- 2022年2月}
@@ -67,24 +66,28 @@
 \section{\texorpdfstring{\faUsers\ 项目经历}{项目经历}}
 
 \datedsubsection{\textbf{gru.ai}}{2023年10月 -- 2025年7月}
-https://gru.ai \ | \ 基于 AI 的在线测试开发平台
+https://gru.ai \ | \ 面向 GitHub Pull Request 流程的 AI 测试开发平台
 \role{开发工程师}{}
 \begin{onehalfspacing}
 \begin{itemize}
-  %% [MOD] 去重：原两条“支撑工作流”重复；补充“编排/调度/集成”的具体动作
-  \item 参与测试开发 Agent 的设计、开发与集成，覆盖工具调用、上下文组织与任务协作链路
-  \item 负责 AI 测试开发工作流的编排与调度能力建设，保障多步骤任务的可观测性与稳定运行
+  \item 参与构建面向 GitHub Pull Request 流程的执行型 AI 单元测试开发 Agent，将代码变更理解、上下文检索、测试生成、sandbox 验证与 PR 回写串联为完整闭环
+  \item 基于统一 Agent Behavior 框架实现配置驱动的测试 Agent 流程，抽象 job / plan / task / step 执行结构，支持多步任务编排、失败恢复与终止控制
+  \item 接入 GitHub API、代码搜索与依赖解析能力，补充目标文件调用关系、相关源码与外部依赖上下文，减少因上下文不足导致的生成失败与无效重试
+  \item 构建基于容器 / sandbox 的执行验证环境，支持 Node.js（npm）、Java（Maven）、Rust（cargo test）等技术栈的标准测试体系运行，以真实执行结果而非文本生成结果作为成功标准
+  \item 设计重试阈值、自动终止和流程回写机制，推动 AI 从代码建议工具演进为面向研发流程的执行型 Agent 能力
 \end{itemize}
 \end{onehalfspacing}
 
 \datedsubsection{\textbf{babel.cloud}}{2022年5月 -- 2025年7月}
-https://babel.cloud \ | \ 面向 AI 场景的云原生在线开发平台
+https://babel.cloud \ | \ 面向 AI 场景的云原生开发平台
 \role{开发工程师}{}
 \begin{onehalfspacing}
 \begin{itemize}
-  %% [MOD] “代码管理能力”具体化；“推理与开发工作流”表述更准确
-  \item 设计并实现平台代码管理能力（仓库/权限/基础操作链路对接与服务化）
-  \item 集成向量数据库能力，支撑 RAG 等场景的检索与知识管理，并服务于 AI 辅助开发工作流
+  \item 参与构建面向 AI 场景的云原生在线开发平台 Babel Cloud，负责平台组件编排、代码版本管理及向量检索基础设施建设
+  \item 设计并实现平台组件组装能力，将 HTTP、Function、Worker 等 TypeScript 模块编排为完整可运行的 Node.js 服务，并注入调试、监控等运行时能力
+  \item 基于 Git 与 Rust 相关 Git 库实现平台内代码版本管理能力，支持代码存储、历史追踪、版本回退与分支操作，打通底层版本语义与上层工作区体验
+  \item 基于 PostgreSQL 及向量插件实现平台内建向量数据库能力，并设计类 Pinecone 风格 API，支撑用户在平台内直接开发 AI 相关应用
+  \item 推动平台从“在线开发环境”演进为“应用构建、代码管理与 AI 能力一体化”的云原生开发平台底座
 \end{itemize}
 \end{onehalfspacing}
 
